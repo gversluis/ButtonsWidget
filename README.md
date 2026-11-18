@@ -9,7 +9,7 @@ ButtonsWidget is a home screen widget which allows you to configure your widget 
 ## 📌 Features
 
 - 🏠 **A remote on your home screen** — as a widget your buttons are always visible and quickly accessible
-- 🌐 **Call a URL with a single tap** — a button press sends an HTTP GET request to the URL you assigned
+- 🎯 **Call a URL with a single tap** — a button press sends an HTTP GET request to the URL you assigned
 - 📩 **Show the response** — display the response text of a URL right on your home screen
 - 📋 **Copy to clipboard** — copy the displayed response with a single tap
 - 🧱 **Choose your own layout** — the configurable grid allows you to create a custom layout
