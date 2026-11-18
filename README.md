@@ -93,7 +93,7 @@ Dependencies
 - [AndroidX](https://developer.android.com/jetpack/androidx) — Core KTX, AppCompat and Activity KTX
 - [Material Components](https://github.com/material-components/material-components-android) — theme and components
 - [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines) — network calls off the main thread
-- [VerticalSeekBar](https://github.com/h6ah4i/android-verticalseekbar) — vertical slider in the editor
+- [VerticalSeekBar](https://github.com/h6ah4i/android-verticalseekbar) by Haruki Hasegawa — vertical slider in the editor
 - [Robolectric](https://robolectric.org/) and JUnit — unit tests
 
 ---
