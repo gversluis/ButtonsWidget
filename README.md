@@ -90,11 +90,11 @@ You need JDK 17 and the Android SDK (platform 35).
 To change the widget later, long press it and pick the reconfigure option of your launcher.
 
 Dependencies
+- [VerticalSeekBar](https://github.com/h6ah4i/android-verticalseekbar) by Haruki Hasegawa — vertical slider in the editor
+- [Robolectric](https://robolectric.org/) and JUnit — unit tests
 - [AndroidX](https://developer.android.com/jetpack/androidx) — Core KTX, AppCompat and Activity KTX
 - [Material Components](https://github.com/material-components/material-components-android) — theme and components
 - [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines) — network calls off the main thread
-- [VerticalSeekBar](https://github.com/h6ah4i/android-verticalseekbar) by Haruki Hasegawa — vertical slider in the editor
-- [Robolectric](https://robolectric.org/) and JUnit — unit tests
 
 ---
 
