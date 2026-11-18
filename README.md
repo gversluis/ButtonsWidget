@@ -33,7 +33,7 @@ ButtonsWidget is a home screen widget which allows you to configure your widget 
 
 ## 📷 Screenshots
 
-<a href="screenshots/widget.png"><img src="screenshots/widget.png" height="630" alt="Screenshot of the widget on the home screen" /></a> <a href="screenshots/settings.png"><img src="screenshots/settings.png" height="630" alt="Screenshot of the widget settings" /></a>
+<a href="screenshots/widget.png"><img src="screenshots/widget.png" height="630" alt="Screenshot of the widget on the home screen" /></a> <a href="screenshots/settings.png"><img src="screenshots/settings.png" height="630" alt="Screenshot of the widget settings" /></a> <a href="screenshots/properties.png"><img src="screenshots/properties.png" height="630" alt="Screenshot of the button properties" /></a>
 
 ---
 
