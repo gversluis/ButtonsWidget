@@ -19,7 +19,7 @@
         android:layout_gravity="fill"
         android:orientation="vertical"/>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/L1x1"
+        android:id="@+id/L1x1a"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_columnSpan="1"
@@ -29,7 +29,7 @@
         android:layout_gravity="fill"
         android:orientation="vertical"/>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/L1x1"
+        android:id="@+id/L1x1b"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_columnSpan="1"
