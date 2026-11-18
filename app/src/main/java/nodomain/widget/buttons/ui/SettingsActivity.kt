@@ -294,45 +294,26 @@ class SettingsActivity : AppCompatActivity() {
     }
 
 
-    // 4. Button Properties Dialog
-
     private fun showButtonPropertiesDialog(btn: GridButton) {
 
-        // Inflate XML layout
         val view = layoutInflater.inflate(
             R.layout.settings_cell_settings,
             null
         )
 
-        // Find views
         val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroupType)
         val rbCallUrl = view.findViewById<RadioButton>(R.id.rbCallUrl)
         val rbTextarea = view.findViewById<RadioButton>(R.id.rbTextarea)
         val rbCopy = view.findViewById<RadioButton>(R.id.rbCopy)
 
-        val browseIconBtn = view.findViewById<Button>(R.id.browseIconBtn)
-
-        val textInput = view.findViewById<EditText>(R.id.textInput)
-
-        val urlSection = view.findViewById<LinearLayout>(R.id.urlSection)
-        val urlLabel = view.findViewById<TextView>(R.id.urlLabel)
-        val urlInput = view.findViewById<EditText>(R.id.urlInput)
-
-        val hSpanInput = view.findViewById<EditText>(R.id.hSpanInput)
-        val vSpanInput = view.findViewById<EditText>(R.id.vSpanInput)
-
-        // Button type
         when (btn.type) {
             ButtonType.CALL_URL -> radioGroup.check(rbCallUrl.id)
             ButtonType.TEXTAREA -> radioGroup.check(rbTextarea.id)
             ButtonType.COPY_CLIPBOARD -> radioGroup.check(rbCopy.id)
         }
 
-// Icon selection
         var selectedIconUri = btn.iconUri
-
-        val selectedIconPreview =
-            view.findViewById<ImageView>(R.id.selectedIconPreview)
+        val selectedIconPreview = view.findViewById<ImageView>(R.id.selectedIconPreview)
 
         fun updateIconPreview(uriString: String?) {
             if (uriString.isNullOrEmpty()) {
@@ -344,10 +325,9 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-// Show existing icon when dialog opens
         updateIconPreview(selectedIconUri)
 
-// Browse for icon
+        val browseIconBtn = view.findViewById<Button>(R.id.browseIconBtn)
         browseIconBtn.setOnClickListener {
             pendingIconCallback = { uri ->
                 selectedIconUri = uri.toString()
@@ -357,8 +337,8 @@ class SettingsActivity : AppCompatActivity() {
             pickIconLauncher.launch(arrayOf("image/*"))
         }
 
+        val textInput = view.findViewById<EditText>(R.id.textInput)
         textInput.setText(btn.text)
-
         val unicodeRow = view.findViewById<LinearLayout>(R.id.unicodeRow)
         for (i in 0 until unicodeRow.childCount) {
             val pBtn = unicodeRow.getChildAt(i) as Button
@@ -369,37 +349,14 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
+        val urlInput = view.findViewById<EditText>(R.id.urlInput)
         urlInput.setText(btn.url)
 
-        fun updateUrlVisibility() {
-            when (radioGroup.checkedRadioButtonId) {
-                rbCallUrl.id -> {
-                    urlSection.visibility = View.VISIBLE
-                    urlLabel.text = "URL to call on press:"
-                }
-
-                rbTextarea.id -> {
-                    urlSection.visibility = View.VISIBLE
-                    urlLabel.text = "URL to call every minute:"
-                }
-
-                rbCopy.id -> {
-                    urlSection.visibility = View.GONE
-                }
-            }
-        }
-
-        updateUrlVisibility()
-
-        radioGroup.setOnCheckedChangeListener { _, _ ->
-            updateUrlVisibility()
-        }
-
-        // Horizontal and vertical span
+        val hSpanInput = view.findViewById<EditText>(R.id.hSpanInput)
+        val vSpanInput = view.findViewById<EditText>(R.id.vSpanInput)
         hSpanInput.setText(btn.colSpan.toString())
         vSpanInput.setText(btn.rowSpan.toString())
 
-        // Dialog
         AlertDialog.Builder(this)
             .setTitle("Button Properties")
             .setView(view)
