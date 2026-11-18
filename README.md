@@ -60,7 +60,7 @@ So I build a native widget:
 
 ## 🚀 Getting Started
 
-1. Download the release or build it yourself
+1. Download from the [releases](https://github.com/gversluis/ButtonsWidget/releases) or build it yourself
 2. Install the app
 3. Long press your home screen, open **Widgets** and add **Buttons Widget**
 4. Some launchers open the settings page directly, if it does not just do a long press on the widget and click Settings in the appearing menu
