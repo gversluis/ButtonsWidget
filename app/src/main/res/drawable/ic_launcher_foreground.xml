@@ -1,0 +1,55 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Four rounded buttons -->
+    <path
+        android:fillColor="#FF101010"
+        android:pathData="
+    M12,8
+    H42
+    Q46,8 46,12
+    V42
+    Q46,46 42,46
+    H12
+    Q8,46 8,42
+    V12
+    Q8,8 12,8
+    Z
+
+    M58,8
+    H88
+    Q92,8 92,12
+    V42
+    Q92,46 88,46
+    H58
+    Q54,46 54,42
+    V12
+    Q54,8 58,8
+    Z
+
+    M12,58
+    H42
+    Q46,58 46,62
+    V88
+    Q46,92 42,92
+    H12
+    Q8,92 8,88
+    V62
+    Q8,58 12,58
+    Z
+
+    M58,58
+    H88
+    Q92,58 92,62
+    V88
+    Q92,92 88,92
+    H58
+    Q54,92 54,88
+    V62
+    Q54,58 58,58
+    Z" />
+</vector>

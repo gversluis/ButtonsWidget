@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp" />
+
+            <SeekBar
+                android:id="@+id/width_picker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:min="1"
+                android:max="@integer/max_grid_width"
+                android:progress="1"
+                android:rotation="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                        android:id="@+id/height_picker"
+                        android:layout_weight="1"
+                        android:min="1"
+                        android:max="@integer/max_grid_height"
+                        android:progress="1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:splitTrack="false"
+                        app:seekBarRotation="CW90" /> <!-- Rotation: CW90 or CW270 -->
+                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/grid_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#18181F"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/io_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/import_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Import" />
+
+            <Button
+                android:id="@+id/export_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Export" />
+
+            <Button
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

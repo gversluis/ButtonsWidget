@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_button_dark">
+
+    <LinearLayout
+        android:id="@+id/widget_tile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cell_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Button Icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cell_text"
+            android:text="Go to settings to configure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="#E2E8F0"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

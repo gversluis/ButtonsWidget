@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nodomain.widget.buttons">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Buttons Widget"
+        android:theme="@style/Theme.Material3.Dark.NoActionBar">
+
+        <receiver
+            android:name=".widget.GridAppWidgetProvider"
+            android:exported="true"
+            android:label="Grid Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="nodomain.widget.buttons.ACTION_BUTTON_CLICK" />
+                <action android:name="nodomain.widget.buttons.ACTION_FLASH_RESET" />
+                <action android:name="nodomain.widget.buttons.ACTION_POLL_TEXTAREAS" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/grid_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="true"
+            android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

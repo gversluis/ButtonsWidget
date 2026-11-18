@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout_1x26"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_columnSpan="26"
+    android:layout_rowSpan="1"
+    android:layout_columnWeight="26"
+    android:layout_rowWeight="1"
+    android:layout_gravity="fill"
+    android:orientation="vertical">
+    <include layout="@layout/widget_tile" />
+</FrameLayout>

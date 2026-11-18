@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:rowCount="3"
+    android:background="@drawable/bg_widget_dark"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/widget_layout_2x2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnSpan="4"
+        android:layout_rowSpan="3"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:orientation="vertical">
+        <include layout="@layout/widget_tile" />
+    </FrameLayout>
+</GridLayout>
