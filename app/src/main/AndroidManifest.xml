@@ -9,7 +9,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Buttons Widget"
-        android:theme="@style/Theme.Material3.Dark.NoActionBar">
+        android:theme="@style/Theme.Material3.Dark.NoActionBar"
+        android:usesCleartextTraffic="true">
 
         <receiver
             android:name=".widget.GridAppWidgetProvider"
